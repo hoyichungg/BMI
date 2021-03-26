@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/BMI.css">
+    <link href="//db.onlinewebfonts.com/c/344d17417b87d35e88d9df15bea12e2e?family=SFNSDisplay" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>BMI</title>
+</head>
+
+<body>
+    <div class="bmi-banner">
+        <div class="bmi-banner-content">
+
+            <div class="bmi-logo">
+                <img src="./img/BMICLogo.png" alt="">
+            </div>
+
+            <div class="bmi-input">
+                <span>身高 cm</span>
+                <input type="text" class="height" placeholder="請輸入身高"></input>
+                <span class="kg-span">體重 kg</span>
+                <input type="text" class="weight" placeholder="請輸入體重"></input>
+            </div>
+
+            <div class="bmi-result">
+                看結果
+            </div>
+
+
+            <!-- 
+                    <div class="bmi-data-area">
+
+                    <div class="great-area">
+                        <div class="bmi-result-great">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-great-title">
+                            <span>理想</span>
+                        </div>
+
+                    </div>
+
+                    <div class="tooLight-area">
+                        <div class="bmi-result-tooLight">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-tooLight-title">
+                            <span>過輕</span>
+                        </div>
+
+                    </div>
+
+                    <div class="tooHeavy-area">
+                        <div class="bmi-result-tooHeavy">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-tooHeavy-title">
+                            <span>過重</span>
+                        </div>
+
+                    </div>
+
+                    <div class="mildObesity-area">
+                        <div class="bmi-result-mildObesity">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-mildObesity-title">
+                            <span>輕度肥胖</span>
+                        </div>
+
+                    </div>
+
+                    <div class="moderateObesity-area">
+                        <div class="bmi-result-moderateObesity">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-moderateObesity-title">
+                            <span>中度肥胖</span>
+                        </div>
+
+                    </div>
+
+                    <div class="severeObesity-area">
+                        <div class="bmi-result-severeObesity">
+                            <div class="icon-area">
+                                <img src="./img/icons_loop.png" alt="" class="icon">
+                            </div>
+                            <div class="text-area">
+                                <span class="bmi">
+                                    20.90
+                                    <div class="unit">
+                                        BMI
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-result-severeObesity-title">
+                            <span>重度肥胖</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                -->
+        </div>
+    </div>
+    <div class="bmi-index">
+        <div class="bmi-index-content">
+            <div class="index-title">
+                <h3>BMI 紀錄</h3>
+            </div>
+            <ul class="list">
+                <!-- 
+                <li class="great">
+                    <div class="great-content">
+
+                        <span>
+                            理想
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="tooLight">
+                    <div class="tooLight-content">
+
+                        <span>
+                            過輕
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="tooHeavy">
+                    <div class="tooHeavy-content">
+
+                        <span>
+                            過重
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="mildObesity">
+                    <div class="mildObesity-content">
+
+                        <span>
+                            輕度肥胖
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="moderateObesity">
+                    <div class="moderateObesity-content">
+
+                        <span>
+                            中度肥胖
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="severeObesity">
+                    <div class="severeObesity-content">
+
+                        <span>
+                            重度肥胖
+                        </span>
+
+                        <div class="bmi-area">
+                            <span class="bmi-tit">BMI</span>
+                            <span class="bmi-num">
+                                20.90
+                            </span>
+                        </div>
+
+                        <div class="weight-area">
+                            <span class="weight-tit">weight</span>
+                            <span class="weight-num">
+                                20.90kg
+                            </span>
+                        </div>
+
+                        <div class="height-area">
+                            <span class="height-tit">height</span>
+                            <span class="height-num">
+                                20.90cm
+                            </span>
+                        </div>
+
+                        <div class="time-area">
+                            06-19-2017
+                        </div>
+
+                    </div>
+                </li> -->
+
+            </ul>
+        </div>
+    </div>
+    <div class="bmi-footer">
+        <img src="./img/BMICLogo1.png" alt="">
+    </div>
+    <script src="./Js/BMI.js"></script>
+</body>
+
+</html>

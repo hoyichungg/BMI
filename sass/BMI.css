@@ -1,0 +1,854 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: SFNSDisplay;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+::-webkit-input-placeholder {
+  /* CSS 3 標準 */
+  color: #ffffffcc;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+:-ms-input-placeholder {
+  /* CSS 3 標準 */
+  color: #ffffffcc;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+::-ms-input-placeholder {
+  /* CSS 3 標準 */
+  color: #ffffffcc;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+::placeholder {
+  /* CSS 3 標準 */
+  color: #ffffffcc;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Safari */
+  color: #FFFFFFcc;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+body .bmi-banner {
+  background: #424242;
+  height: 300px;
+}
+
+body .bmi-banner .bmi-banner-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-input span {
+  color: #FFD366;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-input .kg-span {
+  padding-top: 10px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-input input {
+  width: 250px;
+  height: 40px;
+  outline: none;
+  border: #FFD366 2px solid;
+  border-radius: 10px;
+  background-color: #ffffff3d;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body .bmi-banner .bmi-banner-content .bmi-input input:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid #FFD366;
+  border-radius: 10px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-result {
+  width: 120px;
+  height: 120px;
+  background: #FFD366;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 120px;
+  font-size: 24px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-result:hover {
+  background: #FFD366;
+  -webkit-box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+          box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+
+body .bmi-banner .bmi-banner-content .bmi-result:active {
+  background: #DEA821;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great {
+  border: 6px solid #86D73E;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #86D73E;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great .icon-area:hover {
+  background: #86D73E;
+  -webkit-box-shadow: 0 1px 6px 3px #639933;
+          box-shadow: 0 1px 6px 3px #639933;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #86D73F;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great .text-area .unit {
+  font-size: 14px;
+  color: #86D73F;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .great-area .bmi-result-great-title {
+  font-size: 32px;
+  color: #86D73E;
+  margin: 30px 20px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight {
+  border: 6px solid #31BAF9;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #31BAF9;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight .icon-area:hover {
+  background: #31BAF9;
+  -webkit-box-shadow: 0 1px 6px 3px #2e93c2;
+          box-shadow: 0 1px 6px 3px #2e93c2;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #31BAF9;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight .text-area .unit {
+  font-size: 14px;
+  color: #31BAF9;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooLight-area .bmi-result-tooLight-title {
+  font-size: 32px;
+  color: #31BAF9;
+  margin: 30px 20px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy {
+  border: 6px solid #FF982D;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #FF982D;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy .icon-area:hover {
+  background: #FF982D;
+  -webkit-box-shadow: 0 1px 6px 3px #c47522;
+          box-shadow: 0 1px 6px 3px #c47522;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #FF982D;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy .text-area .unit {
+  font-size: 14px;
+  color: #FF982D;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .tooHeavy-area .bmi-result-tooHeavy-title {
+  font-size: 32px;
+  color: #FF982D;
+  margin: 30px 20px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity {
+  border: 6px solid #FF6C02;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #FF6C02;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity .icon-area:hover {
+  background: #FF6C02;
+  -webkit-box-shadow: 0 1px 6px 3px #c95502;
+          box-shadow: 0 1px 6px 3px #c95502;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #FF6C02;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity .text-area .unit {
+  font-size: 14px;
+  color: #FF6C02;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .mildObesity-area .bmi-result-mildObesity-title {
+  font-size: 32px;
+  color: #FF6C02;
+  margin: 30px 20px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity {
+  border: 6px solid #FF6C02;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #FF6C02;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity .icon-area:hover {
+  background: #FF6C02;
+  -webkit-box-shadow: 0 1px 6px 3px #c95502;
+          box-shadow: 0 1px 6px 3px #c95502;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #FF6C02;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity .text-area .unit {
+  font-size: 14px;
+  color: #FF6C02;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .moderateObesity-area .bmi-result-moderateObesity-title {
+  font-size: 32px;
+  color: #FF6C02;
+  margin: 30px 20px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity {
+  border: 6px solid #FF1200;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity .icon-area {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #FF1200;
+  border: 3px solid #424242;
+  border-radius: 50%;
+  top: 80px;
+  left: 75px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity .icon-area img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity .icon-area:hover {
+  background: #FF1200;
+  -webkit-box-shadow: 0 1px 6px 3px #d10e00;
+          box-shadow: 0 1px 6px 3px #d10e00;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity .text-area {
+  text-align: center;
+  font-size: 32px;
+  color: #FF1200;
+  position: relative;
+  top: 30px;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity .text-area .unit {
+  font-size: 14px;
+  color: #FF1200;
+}
+
+body .bmi-banner .bmi-banner-content .bmi-data-area .severeObesity-area .bmi-result-severeObesity-title {
+  font-size: 32px;
+  color: #FF1200;
+  margin: 30px 20px;
+}
+
+body .bmi-index {
+  background: #e7e7e7;
+}
+
+body .bmi-index .bmi-index-content {
+  width: 50%;
+  margin: 0px auto;
+}
+
+body .bmi-index .bmi-index-content .index-title {
+  text-align: center;
+  font-size: 24px;
+  color: #424242;
+}
+
+body .bmi-index .bmi-index-content .index-title h3 {
+  padding-top: 50px;
+}
+
+body .bmi-index .bmi-index-content .list {
+  padding: 50px 100px;
+}
+
+body .bmi-index .bmi-index-content .list li {
+  height: 62px;
+  margin: 10px auto;
+  background: #fff;
+}
+
+body .bmi-index .bmi-index-content .list .great {
+  border-left: 5px solid #86D73F;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .great .great-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .great:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight {
+  border-left: 5px solid #31BAF9;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight .tooLight-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .tooLight:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy {
+  border-left: 5px solid #FF982D;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy .tooHeavy-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .tooHeavy:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity {
+  border-left: 5px solid #FF6C03;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity .mildObesity-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .mildObesity:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity {
+  border-left: 5px solid #FF6C03;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity .moderateObesity-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .moderateObesity:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity {
+  border-left: 5px solid #FF1200;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 18px;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content span {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .bmi-area .bmi-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .weight-area .weight-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .height-area .height-tit {
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .time-area {
+  display: contents;
+  color: #424242;
+  font-size: 12px;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .fas {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity .severeObesity-content .fas:hover {
+  color: #e75d5d;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-index .bmi-index-content .list .severeObesity:hover {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+body .bmi-footer {
+  background: #FFD366;
+  height: 90px;
+  text-align: center;
+}
+
+body .bmi-footer img {
+  height: 55px;
+  width: 55px;
+  margin: 20px;
+}
+/*# sourceMappingURL=BMI.css.map */

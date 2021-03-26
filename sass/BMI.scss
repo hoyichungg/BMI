@@ -1,0 +1,842 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SFNSDisplay;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+::placeholder {
+    /* CSS 3 標準 */
+
+    color: #ffffffcc;
+    font-size: 24px;
+    padding-left: 12px;
+
+}
+
+::-webkit-input-placeholder {
+    /* Chrome, Safari */
+
+    color: #FFFFFFcc;
+    font-size: 24px;
+    padding-left: 12px;
+
+}
+
+
+body {
+    .bmi-banner {
+        background: #424242;
+        height: 300px;
+
+        .bmi-banner-content {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            margin: 0 auto;
+            padding: 80px 0;
+
+            .bmi-input {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    color: #FFD366;
+                }
+
+                .kg-span {
+                    padding-top: 10px;
+                }
+
+                input {
+                    width: 250px;
+                    height: 40px;
+                    outline: none;
+                    border: #FFD366 2px solid;
+                    border-radius: 10px;
+                    background-color: #ffffff3d;
+                    font-size: 24px;
+                    color: rgba(255, 255, 255, 0.50);
+                    ;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.18);
+                        border: 2px solid #FFD366;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+
+            .bmi-result {
+                width: 120px;
+                height: 120px;
+                background: #FFD366;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 120px;
+                font-size: 24px;
+
+                &:hover {
+                    background: #FFD366;
+                    box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+                }
+
+                &:active {
+                    background: #DEA821;
+                }
+            }
+
+            .bmi-data-area {
+
+
+                .great-area {
+                    display: flex;
+
+                    .bmi-result-great {
+                        border: 6px solid #86D73E;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #86D73E;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #86D73E;
+                                box-shadow: 0 1px 6px 3px #639933;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #86D73F;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #86D73F;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-great-title {
+                        font-size: 32px;
+                        color: #86D73E;
+                        margin: 30px 20px;
+                    }
+                }
+
+                .tooLight-area {
+                    display: flex;
+
+                    .bmi-result-tooLight {
+                        border: 6px solid #31BAF9;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #31BAF9;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #31BAF9;
+                                box-shadow: 0 1px 6px 3px #2e93c2;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #31BAF9;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #31BAF9;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-tooLight-title {
+                        font-size: 32px;
+                        color: #31BAF9;
+                        margin: 30px 20px;
+                    }
+                }
+
+                .tooHeavy-area {
+                    display: flex;
+
+                    .bmi-result-tooHeavy {
+                        border: 6px solid #FF982D;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #FF982D;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #FF982D;
+                                box-shadow: 0 1px 6px 3px #c47522;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #FF982D;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #FF982D;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-tooHeavy-title {
+                        font-size: 32px;
+                        color: #FF982D;
+                        margin: 30px 20px;
+                    }
+                }
+
+                .mildObesity-area {
+                    display: flex;
+
+                    .bmi-result-mildObesity {
+                        border: 6px solid #FF6C02;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #FF6C02;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #FF6C02;
+                                box-shadow: 0 1px 6px 3px #c95502;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #FF6C02;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #FF6C02;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-mildObesity-title {
+                        font-size: 32px;
+                        color: #FF6C02;
+                        margin: 30px 20px;
+                    }
+                }
+
+                .moderateObesity-area {
+                    display: flex;
+
+                    .bmi-result-moderateObesity {
+                        border: 6px solid #FF6C02;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #FF6C02;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #FF6C02;
+                                box-shadow: 0 1px 6px 3px #c95502;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #FF6C02;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #FF6C02;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-moderateObesity-title {
+                        font-size: 32px;
+                        color: #FF6C02;
+                        margin: 30px 20px;
+                    }
+                }
+
+                .severeObesity-area {
+                    display: flex;
+
+                    .bmi-result-severeObesity {
+                        border: 6px solid #FF1200;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .icon-area {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            background: #FF1200;
+                            border: 3px solid #424242;
+                            border-radius: 50%;
+                            top: 80px;
+                            left: 75px;
+
+                            img {
+                                position: relative;
+                                top: 3px;
+                                left: 5px;
+                            }
+
+                            &:hover {
+                                background: #FF1200;
+                                box-shadow: 0 1px 6px 3px #d10e00;
+                            }
+                        }
+
+                        .text-area {
+                            text-align: center;
+                            font-size: 32px;
+                            color: #FF1200;
+                            position: relative;
+                            top: 30px;
+
+                            .unit {
+                                font-size: 14px;
+                                color: #FF1200;
+                            }
+                        }
+
+                    }
+
+                    .bmi-result-severeObesity-title {
+                        font-size: 32px;
+                        color: #FF1200;
+                        margin: 30px 20px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .bmi-index {
+        background: rgb(231, 231, 231);
+
+        .bmi-index-content {
+            width: 50%;
+            margin: 0px auto;
+
+
+            .index-title {
+                text-align: center;
+                font-size: 24px;
+                color: #424242;
+
+                h3 {
+                    padding-top: 50px;
+                }
+            }
+
+            .list {
+                padding: 50px 100px;
+
+                li {
+                    height: 62px;
+                    margin: 10px auto;
+                    background: #fff;
+                }
+
+                .great {
+                    border-left: 5px solid#86D73F;
+
+                    .great-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                .tooLight {
+                    border-left: 5px solid#31BAF9;
+
+                    .tooLight-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                .tooHeavy {
+                    border-left: 5px solid#FF982D;
+
+                    .tooHeavy-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                .mildObesity {
+                    border-left: 5px solid#FF6C03;
+
+                    .mildObesity-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                .moderateObesity {
+                    border-left: 5px solid#FF6C03;
+
+                    .moderateObesity-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                .severeObesity {
+                    border-left: 5px solid#FF1200;
+
+                    .severeObesity-content {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 18px;
+
+                        span {
+                            font-size: 20px;
+                            color: #4A4A4A;
+                        }
+
+                        .bmi-area {
+
+                            .bmi-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .weight-area {
+
+                            .weight-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .height-area {
+
+                            .height-tit {
+                                color: #424242;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .time-area {
+                            display: contents;
+                            color: #424242;
+                            font-size: 12px;
+                        }
+
+                        .fas {
+                            font-size: 20px;
+                            color: #4A4A4A;
+
+                            &:hover {
+                                color: rgb(231, 93, 93);
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .bmi-footer {
+        background: #FFD366;
+        height: 90px;
+        text-align: center;
+
+        img {
+            height: 55px;
+            width: 55px;
+            margin: 20px;
+        }
+    }
+}
